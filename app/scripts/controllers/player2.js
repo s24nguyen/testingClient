@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name testProjectsApp.controller:Player2Ctrl
+ * @name clientApp.controller:Player2Ctrl
  * @description
  * # Player2Ctrl
- * Controller of the testProjectsApp
+ * Controller of the clientApp
  */
-angular.module('testProjectsApp')
+angular.module('clientApp')
   .controller('Player2Ctrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

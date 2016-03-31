@@ -10,19 +10,19 @@
         </div>
       </div>
       <br>
-      <form class="form" name="registerForm" ng-submit="register()" ng-init="user{}">
+      <form name="registerForm" ng-init="user = {}" ng-submit="register()">
 
         <div class="row">
           <div class="col-sm-6">
-            <div class="form-group" ng-model="err.firstName" ng-class="{true: 'has-error'} [err.firstName && !registerForm.firstName.$dirty"]>
-              <input type="text" class="form-control" name="firstName" placeholder="First Name" ng-model="user.firstName">
-              <span class="help-block" ng-show="[err.firstName]">{{err.firstName}}</span>
+            <div class="form-group" ng-model="err.first_name" ng-class="{true: 'has-error'} [err.first_name && !registerForm.first_name.$dirty]">
+              <input type="text" class="form-control" name="first_name" placeholder="First Name" ng-model="user.first_name">
+              <span class="help-block" ng-show="[err.first_name]">{{err.first_name}}</span>
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="form-group" ng-model="err.lastName" ng-class="{true: 'has-error'}[err.lastName  && !registerForm.lastName.$dirty]">
-            <input type="text" class="form-control" name="lastName" placeholder="Last Name" ng-model="user.lastName">
-              <span class="help-block" ng-show="[err.lastName]">{{err.lastName}}</span>
+            <div class="form-group" ng-model="err.last_name" ng-class="{true: 'has-error'}[err.last_name  && !registerForm.last_name.$dirty]">
+            <input type="text" class="form-control" name="last_name" placeholder="Last Name" ng-model="user.last_name">
+              <span class="help-block" ng-show="[err.last_name]">{{err.last_name}}</span>
               </div>
           </div>
         </div>
@@ -201,9 +201,9 @@
           </div>
             </div>
           <div class="col-sm-6">
-            <div class="form-group" ng-model="err.cPassword" ng-class="{true: 'has-error'}[err.cPassword  && !registerForm.cPassword.$dirty]">
-            <input type="password" class="form-control" name="cPassword" placeholder="Re-type Password" ng-model="user.cPassword">
-              <span class="help-block" ng-show="[err.cPassword]">{{err.cPassword}}</span>
+            <div class="form-group" ng-model="err.confirm_password" ng-class="{true: 'has-error'}[err.confirm_password  && !registerForm.confirm_password.$dirty]">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Re-type Password" ng-model="user.confirm_password">
+              <span class="help-block" ng-show="[err.confirm_password]">{{err.confirm_password}}</span>
               </div>
 
           </div>
