@@ -3,11 +3,6 @@
   <component name="CompassSettings">
     <option name="compassExecutableFilePath" value="C:/Ruby22/bin/compass.bat" />
     <option name="compassSupportEnabled" value="true" />
-    <option name="importPaths">
-      <list>
-        <option value="C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets" />
-      </list>
-    </option>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -15,6 +10,5 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="client node_modules" level="project" />
-    <orderEntry type="library" name="compass-library" level="project" />
   </component>
 </module>

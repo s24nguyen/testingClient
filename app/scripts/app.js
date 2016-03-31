@@ -57,6 +57,7 @@ angular
         controller: 'PlayerProfileCtrl',
         controllerAs: 'playerprofile'
       })
+
       .otherwise({
         redirectTo: '/'
       });
