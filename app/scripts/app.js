@@ -57,6 +57,14 @@ angular
         controller: 'PlayerProfileCtrl',
         controllerAs: 'playerprofile'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
+      .when('/mainLogin', {
+        templateUrl: 'views/mainLogin.html',
+        controller: 'MainLoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

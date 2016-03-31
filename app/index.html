@@ -79,7 +79,8 @@
               </li>
               <li><a ng-href="#/player2">test</a></li>
               <li><a ng-href="#/register">Register</a></li>
-              <li ng-show="!user"><a data-toggle="modal" data-target="#login-modal">Login</a></li>
+              <li ng-show="!user"><a ng-href="#/login" data-toggle="modal" data-target="#login-modal">Login</a></li>
+              <!--<li ng-show="!user"><a data-toggle="modal" data-target="#login-modal">Login</a></li>-->
               <li ng-show="user"><a href ng-click="logout()">Logout</a></li>
             </ul>
           </div>
@@ -97,7 +98,7 @@
             <form name="loginForm" ng-init="authInfo = {}" ng-submit="login()">
               <div class="right-inner-addon">
                 <i class="glyphicon glyphicon-knight"></i>
-                <input class="form-control" type="text" name="user" ng-model="authInfo.gamerTag" placeholder="Gamer Tag"/>
+                <input class="form-control" type="email" name="user" ng-model="authInfo.email" placeholder="Email"/>
               </div>
               <div class="right-inner-addon">
                 <i class="glyphicon glyphicon-sunglasses"></i>
@@ -159,6 +160,7 @@
     <script src="scripts/controllers/header.js"></script>
     <script src="scripts/controllers/player2.js"></script>
     <script src="scripts/controllers/playerprofile.js"></script>
+        <script src="scripts/controllers/mainlogin.js"></script>
         <!-- endbuild -->
 </body>
 </html>
