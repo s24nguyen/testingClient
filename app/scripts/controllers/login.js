@@ -9,6 +9,8 @@
  */
 angular.module('clientApp')
   .controller('LoginCtrl', function ($scope, $http, $location, $cookieStore) {
+    $('#login-modal').modal('hide');
+
     $scope.err = false;
 
     $scope.login = function () {

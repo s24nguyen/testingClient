@@ -1,7 +1,4 @@
-<!-- Add your site or application content here -->
 <div ng-controller="HeaderCtrl">
-
-
 <ul class="bubbles">
   <li></li>
   <li></li>
@@ -43,7 +40,8 @@
           </ul>
         </li>
         <li><a ng-href="#/player2">test</a></li>
-        <li><a ng-href="#/registration">Register</a></li>
+        <li><a ng-href="#/register">Register</a></li>
+        <!--<li ng-show="!user"><a ng-href="#/login" data-toggle="modal" data-target="#login-modal">Login</a></li>-->
         <li ng-show="!user"><a data-toggle="modal" data-target="#login-modal">Login</a></li>
         <li ng-show="user"><a href ng-click="logout()">Logout</a></li>
       </ul>
@@ -51,31 +49,34 @@
   </div>
 </nav>
 
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="loginmodal-container">
+        <h1>Login to Your Account</h1><br>
+        <p class="warningText" ng-show="err == true" style="padding: 1em;">
+          Your userid or password is incorrect. Correct the information and try again.
+        </p>
+        <form name="loginForm" ng-init="authInfo = {}" ng-submit="login()">
+          <div class="right-inner-addon">
+            <i class="glyphicon glyphicon-knight"></i>
+            <input class="form-control" type="email" name="user" ng-model="authInfo.email" placeholder="Email"/>
+          </div>
+          <div class="right-inner-addon">
+            <i class="glyphicon glyphicon-sunglasses"></i>
+            <input class="form-control" type="password" name="pass" ng-model="authInfo.password" placeholder="Password"/>
+          </div>
+          <button type="submit" name="login" class="btn btn-shutterOut">Login</button>
+        </form>
 
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  <div class="modal-dialog">
-    <div class="loginmodal-container">
-      <h1>Login to Your Account</h1><br>
-      <p class="bg-danger" ng-show="err == true" style="padding: 1em;">
-        Your userid or password is incorrect. Correct the information and try again.
-      </p>
-      <form name="loginForm" ng-init="authInfo = {}" ng-submit="login()">
-        <div class="right-inner-addon">
-          <i class="glyphicon glyphicon-knight"></i>
-          <input class="form-control" type="text" name="user" ng-model="authInfo.gamerTag" placeholder="Gamer Tag"/>
+        <div class="login-help">
+          <p>Don't have an account yet?</p>
+          <a ng-href="#/register">Register!</a>
         </div>
-        <div class="right-inner-addon">
-          <i class="glyphicon glyphicon-sunglasses"></i>
-          <input class="form-control" type="password" name="pass" ng-model="authInfo.password" placeholder="Password"/>
-        </div>
-        <button type="submit" name="login" class="btn btn-shutterOut">Login</button>
-      </form>
-
-      <div class="login-help">
-        <p>Don't have an account yet?</p>
-        <a ng-href="#/registration">Register!</a>
       </div>
     </div>
   </div>
 </div>
+
+
+
 </div>

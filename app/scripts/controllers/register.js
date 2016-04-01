@@ -10,8 +10,6 @@
 angular.module('clientApp')
   .controller('RegisterCtrl', function ($scope, $http, $location) {
 
-    $('#login-modal').modal('hide');
-
       $scope.register = function(){
         console.log($scope.user);
         $scope.registerForm.$setPristine(true);

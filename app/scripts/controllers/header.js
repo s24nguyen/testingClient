@@ -9,6 +9,7 @@
  */
 angular.module('clientApp')
   .controller('HeaderCtrl', function ($scope, $http, $cookieStore, $location) {
+
     $scope.user = $cookieStore.get('user');
     console.log($scope.user);
 
@@ -23,4 +24,25 @@ angular.module('clientApp')
       $scope.user = null;
       $location.path("")
     }
+
+
+
+    $scope.err = false;
+
+    $scope.login = function () {
+      $http.post('/api/header', $scope.authInfo).success(loginSuccess).error(loginFailure);
+    }
+
+    var loginSuccess = function(data, status){
+      $cookieStore.put('user', data);
+      $http.defaults.headers.common['X-AUTH-TOKEN'] = data.token;
+      $location.path("playerprofile");
+    }
+
+    var loginFailure = function(data, status){
+      $scope.err = true;
+    }
+    $('#login-modal').modal('hide');
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
   });
